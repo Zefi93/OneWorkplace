@@ -1,7 +1,7 @@
 Write-Host  -ForegroundColor Yellow "Starting Brooks' Custom OSDCloud ..."
 cls
 Write-Host "===================== Main Menu =======================" -ForegroundColor Yellow
-Write-Host "===================== Thomas.C ========================" -ForegroundColor Yellow
+Write-Host "===================== Thomas ==========================" -ForegroundColor Yellow
 Write-Host "=======================================================" -ForegroundColor Yellow
 Write-Host "1: Windows 10 21H1 | French | Pro"-ForegroundColor Yellow
 Write-Host "2: Windows 10 20H2 | French | Pro | (Use This One !)"-ForegroundColor Green
@@ -25,5 +25,5 @@ switch ($input)
     '5' { Start-OSDCloud } 
     '6' { Exit }
 }
-
+Read-Host -Prompt "Please remove the USB key then hit any key to continue ..."
 wpeutil reboot

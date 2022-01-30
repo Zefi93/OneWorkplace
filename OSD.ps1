@@ -3,12 +3,8 @@
 #               for 20H2 and also install drivers and Windows updates to latest as needed.
 #================================================================================================
 
-#================================================================================================
-#   Set Configuration
-#   DO NOT MODIFY BELOW UNLESS INSTRUCTED
-#================================================================================================
-
-# Version 1.0
+# Version 1.1
+# 30/01//2022
 
 #Change Display Resolution for Virtual Machine
 if ((Get-MyComputerModel) -match 'Virtual') {

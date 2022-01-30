@@ -9,6 +9,8 @@
 #================================================================================================
 $Global:OSBuild = "20H2"
 
+Set-Disres 1600
+
 $Params = @{
     OSBuild     = $Global:OSBuild
     OSEdition   = "Pro"

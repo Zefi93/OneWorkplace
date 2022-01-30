@@ -49,15 +49,16 @@ $Params = @{
     UpdateDrivers = $true
     UpdateWindows = $true
 }
+
+    If (!(Test-Path "C:\ProgramData\OSDeploy")) {
+            New-Item "C:\ProgramData\OSDeploy" -ItemType Directory -Force | Out-Null
+        }
+
 Start-OOBEDeploy @Params
 #================================================
 #   WinPE PostOS
 #   Set OOBEDeploy CMD.ps1
 #================================================
-
-    If (!(Test-Path "C:\ProgramData\OSDeploy")) {
-            New-Item "C:\ProgramData\OSDeploy" -ItemType Directory -Force | Out-Null
-        }
 
 $SetCommand = @'
 @echo off

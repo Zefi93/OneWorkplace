@@ -37,7 +37,7 @@ switch ($input)
 
     '5' { Exit }
     '99' { Start-OSDCloud }
-    'HP' { Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 }
+    'HP' { Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 -Screenshot}
 }
 
 #================================================================================================

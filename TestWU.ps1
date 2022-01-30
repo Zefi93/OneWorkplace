@@ -1,6 +1,4 @@
 #================================================================================================
-#   Author:     stng@informatica.com
-#   Date:       August 17, 2021
 #   Purpose:    This script set the needed configuration to install the base image 
 #               for 20H2 and also install drivers and Windows updates to latest as needed.
 #================================================================================================
@@ -13,8 +11,8 @@ $Global:OSBuild = "20H2"
 
 $Params = @{
     OSBuild     = $Global:OSBuild
-    OSEdition   = "Enterprise"
-    Culture     = "en-us"
+    OSEdition   = "Pro"
+    Culture     = "fr-fr"
     SkipAutopilot = $true
     SkipODT     = $true
     ZTI         = $true

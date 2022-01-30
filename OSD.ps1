@@ -20,7 +20,7 @@ Write-Host "================= Windows Edition =====================" -Foreground
 Write-Host "=======================================================" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "1: Windows 10 20H2 | French  | Pro (Use This One !)"-ForegroundColor Green
-Write-Host "2: Windows 10 20H2 | English | Pro (Not supported)"-ForegroundColor Yellow
+Write-Host "2: Windows 10 20H2 | English | Pro"-ForegroundColor Yellow
 Write-Host "3: Windows 10 21H1 | French  | Pro (Not supported)"-ForegroundColor Yellow
 Write-Host "4: Windows 10 21H1 | English | Pro (Not supported)"-ForegroundColor Yellow
 Write-Host ""

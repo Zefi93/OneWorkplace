@@ -9,7 +9,11 @@
 #================================================================================================
 $Global:OSBuild = "20H2"
 
-Set-Disres 1600
+#Change Display Resolution for Virtual Machine
+if ((Get-MyComputerModel) -match 'Virtual') {
+    Write-Host  -ForegroundColor Cyan "Setting Display Resolution to 1600px"
+    Set-DisRes 1600
+}
 
 $Params = @{
     OSBuild     = $Global:OSBuild

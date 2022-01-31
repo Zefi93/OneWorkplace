@@ -3,8 +3,8 @@
 #               for 20H2 and also install drivers and Windows updates to latest as needed.
 #================================================================================================
 
-# Version 1.1
-# 30/01//2022
+# Version 1.1 (30/01/2022) : Fix Typo
+# Version 1.2 (31/01/2022) : Add OSLicence
 
 #Change Display Resolution for Virtual Machine
 if ((Get-MyComputerModel) -match 'Virtual') {
@@ -13,7 +13,7 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 }
 Clear-Host
 Write-Host "===========================================================" -ForegroundColor Yellow
-Write-Host "================== Windows Edition (1.1) ==================" -ForegroundColor Yellow
+Write-Host "================== Windows Edition (1.2) ==================" -ForegroundColor Yellow
 Write-Host "===========================================================" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "1: Windows 10 20H2 | French  | Pro (Use This One !)" -ForegroundColor Green

@@ -30,20 +30,14 @@ Install-Module OSD -Force
 
 switch ($input)
 {
-    '1' {   $Global:OSBuild = "20H2"
-            Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Firmware }
-    '2' {   $Global:OSBuild = "20H2"
-            Start-OSDCloud -OSLanguage en-us -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT }
-    '3' {   $Global:OSBuild = "21H1"
-            Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 
-    '4' {   $Global:OSBuild = "21H1"
-            Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 
+    '1' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Firmware }
+    '2' {   Start-OSDCloud -OSLanguage en-us -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT }
+    '3' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 
+    '4' {   Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 
 
     '5' { Exit }
-    '99' {  $Global:OSBuild = "20H2"
-            Start-OSDCloud }
-    'HP' {  $Global:OSBuild = "20H2"
-            Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 -Screenshot}
+    '99' {  Start-OSDCloud }
+    'HP' {  Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 -Screenshot}
 }
 
 #================================================================================================
@@ -90,8 +84,10 @@ $SetCommand | Out-File -FilePath "C:\Windows\Install-Updates.ps1" -Encoding asci
 #================================================================================================
 #   Download latest Windows update from Microsoft
 #================================================================================================
-Save-MsUpCatUpdate -Arch x64 -Build $Global:OSBuild -Category DotNetCU -Latest -DestinationDirectory C:\MSUpdates\DotNet
-Save-MsUpCatUpdate -Arch x64 -Build $Global:OSBuild -Category LCU -Latest -DestinationDirectory C:\MSUpdates\LCU
+#Save-MsUpCatUpdate -Arch x64 -Build $Global:OSBuild -Category DotNetCU -Latest -DestinationDirectory C:\MSUpdates\DotNet
+#Save-MsUpCatUpdate -Arch x64 -Build $Global:OSBuild -Category LCU -Latest -DestinationDirectory C:\MSUpdates\LCU
+Save-MsUpCatUpdate -Arch x64 -Category DotNetCU -Latest -DestinationDirectory C:\MSUpdates\DotNet
+Save-MsUpCatUpdate -Arch x64 -Category LCU -Latest -DestinationDirectory C:\MSUpdates\LCU
 
 #================================================================================================
 #   PostOS

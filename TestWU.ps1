@@ -15,12 +15,12 @@ Write-Host "=======================================================" -Foreground
 Write-Host "================= Windows Edition =====================" -ForegroundColor Yellow
 Write-Host "=======================================================" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "1: Windows 10 20H2 | French  | Pro (Use This One !)"-ForegroundColor Green
-Write-Host "2: Windows 10 20H2 | English | Pro"-ForegroundColor Yellow
-Write-Host "3: Windows 10 21H1 | French  | Pro (Not supported)"-ForegroundColor Yellow
-Write-Host "4: Windows 10 21H1 | English | Pro (Not supported)"-ForegroundColor Yellow
+Write-Host "1: Windows 10 20H2 | French  | Pro (Use This One !)" -ForegroundColor Green
+Write-Host "2: Windows 10 20H2 | English | Pro" -ForegroundColor Yellow
+Write-Host "3: Windows 10 21H1 | French  | Pro (Not supported)" -ForegroundColor Yellow
+Write-Host "4: Windows 10 21H1 | English | Pro (Not supported)" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "5: Exit`n"-ForegroundColor Cyan
+Write-Host "5: Exit`n" -ForegroundColor Cyan
 $input = Read-Host "Please make a selection"
 
 Write-Host  -ForegroundColor Yellow "Loading OSDCloud..."
@@ -30,14 +30,20 @@ Install-Module OSD -Force
 
 switch ($input)
 {
-    '1' { Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT }
-    '2' { Start-OSDCloud -OSLanguage en-us -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT }
-    '3' { Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 
-    '4' { Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 
+    '1' {   $Global:OSBuild = "20H2"
+            Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Firmware }
+    '2' {   $Global:OSBuild = "20H2"
+            Start-OSDCloud -OSLanguage en-us -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT }
+    '3' {   $Global:OSBuild = "21H1"
+            Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 
+    '4' {   $Global:OSBuild = "21H1"
+            Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 
 
     '5' { Exit }
-    '99' { Start-OSDCloud }
-    'HP' { Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 -Screenshot}
+    '99' {  $Global:OSBuild = "20H2"
+            Start-OSDCloud }
+    'HP' {  $Global:OSBuild = "20H2"
+            Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 -Screenshot}
 }
 
 #================================================================================================

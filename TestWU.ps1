@@ -31,14 +31,14 @@ Install-Module OSD -Force
 
 switch ($input)
 {
-    '1' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicence Retail }
-    '2' {   Start-OSDCloud -OSLanguage en-us -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicence Retail }
-    '3' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicence Retail }
-    '4' {   Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicence Retail }
+    '1' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
+    '2' {   Start-OSDCloud -OSLanguage en-us -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
+    '3' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
+    '4' {   Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
 
     '5' { Exit }
     '99' {  Start-OSDCloud }
-    'HP' {  Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 -Screenshot -Oslicence Retail }
+    'HP' {  Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 -Screenshot -Oslicense Retail }
 }
 
 #================================================================================================

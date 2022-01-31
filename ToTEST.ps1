@@ -20,9 +20,10 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 $Params = @{
     OSBuild = "21H2"
     OSEdition = "Pro"
-    OSLanguage = "de-de"
+    OSLanguage = "fr-fr"
     ZTI = $true
-    Firmware = $true
+    Firmware = $false
+    SkipAutopilot = $true
 }
 Start-OSDCloud @Params
 
@@ -35,33 +36,6 @@ $OOBEDeployJson = @'
     "Autopilot":  {
                       "IsPresent":  false
                   },
-    "RemoveAppx":  [
-                       "Microsoft.549981C3F5F10",
-                        "Microsoft.BingWeather",
-                        "Microsoft.GetHelp",
-                        "Microsoft.Getstarted",
-                        "Microsoft.Microsoft3DViewer",
-                        "Microsoft.MicrosoftOfficeHub",
-                        "Microsoft.MicrosoftSolitaireCollection",
-                        "Microsoft.MixedReality.Portal",
-                        "Microsoft.Office.OneNote",
-                        "Microsoft.People",
-                        "Microsoft.SkypeApp",
-                        "Microsoft.Wallet",
-                        "Microsoft.WindowsCamera",
-                        "microsoft.windowscommunicationsapps",
-                        "Microsoft.WindowsFeedbackHub",
-                        "Microsoft.WindowsMaps",
-                        "Microsoft.Xbox.TCUI",
-                        "Microsoft.XboxApp",
-                        "Microsoft.XboxGameOverlay",
-                        "Microsoft.XboxGamingOverlay",
-                        "Microsoft.XboxIdentityProvider",
-                        "Microsoft.XboxSpeechToTextOverlay",
-                        "Microsoft.YourPhone",
-                        "Microsoft.ZuneMusic",
-                        "Microsoft.ZuneVideo"
-                   ],
     "UpdateDrivers":  {
                           "IsPresent":  true
                       },
@@ -78,7 +52,7 @@ $OOBEDeployJson | Out-File -FilePath "C:\ProgramData\OSDeploy\OSDeploy.OOBEDeplo
 #================================================
 #  [PostOS] AutopilotOOBE Configuration Staging
 #================================================
-Write-Host -ForegroundColor Green "Define Computername:"
+<# Write-Host -ForegroundColor Green "Define Computername:"
 $Serial = Get-WmiObject Win32_bios | Select-Object -ExpandProperty SerialNumber
 $TargetComputername = $Serial.Substring(4,4)
 
@@ -129,6 +103,7 @@ Start /Wait PowerShell -NoL -C Start-OOBEDeploy
 Start /Wait PowerShell -NoL -C Restart-Computer -Force
 '@
 $AutopilotCMD | Out-File -FilePath 'C:\Windows\System32\Autopilot.cmd' -Encoding ascii -Force
+#> 
 
 #================================================
 #  [PostOS] SetupComplete CMD Command Line

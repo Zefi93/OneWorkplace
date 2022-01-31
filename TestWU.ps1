@@ -31,7 +31,7 @@ Install-Module OSD -Force
 
 switch ($input)
 {
-    '1' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Firmware }
+    '1' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT }
     '2' {   Start-OSDCloud -OSLanguage en-us -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT }
     '3' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 
     '4' {   Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT } 

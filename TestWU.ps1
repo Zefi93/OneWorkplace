@@ -4,7 +4,7 @@
 #================================================================================================
 
 # Version 1.1 (30/01/2022) : Fix Typo
-# Version 1.2 (31/01/2022) : Add OSLicence
+# Version 1.2 (31/01/2022) : Add OSLicense
 
 #Change Display Resolution for Virtual Machine
 if ((Get-MyComputerModel) -match 'Virtual') {

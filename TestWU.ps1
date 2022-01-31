@@ -11,6 +11,7 @@ if ((Get-MyComputerModel) -match 'Virtual') {
     Write-Host  -ForegroundColor Cyan "Setting Display Resolution to 1600px"
     Set-DisRes 1600
 }
+Clear-Host
 Write-Host "=======================================================" -ForegroundColor Yellow
 Write-Host "================= Windows Edition (1.0) =====================" -ForegroundColor Yellow
 Write-Host "=======================================================" -ForegroundColor Yellow

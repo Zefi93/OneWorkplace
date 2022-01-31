@@ -12,9 +12,9 @@ if ((Get-MyComputerModel) -match 'Virtual') {
     Set-DisRes 1600
 }
 Clear-Host
-Write-Host "=======================================================" -ForegroundColor Yellow
-Write-Host "================= Windows Edition (1.0) =====================" -ForegroundColor Yellow
-Write-Host "=======================================================" -ForegroundColor Yellow
+Write-Host "===========================================================" -ForegroundColor Yellow
+Write-Host "================== Windows Edition (1.1) ==================" -ForegroundColor Yellow
+Write-Host "===========================================================" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "1: Windows 10 20H2 | French  | Pro (Use This One !)" -ForegroundColor Green
 Write-Host "2: Windows 10 20H2 | English | Pro" -ForegroundColor Yellow

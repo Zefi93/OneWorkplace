@@ -19,7 +19,7 @@ Write-Host "===========================================================" -Foregr
 Write-Host ""
 Write-Host "1: Windows 10 21H2 | French  | Pro (Use This One !)" -ForegroundColor Green
 Write-Host "2: Windows 10 21H2 | English | Pro" -ForegroundColor Yellow
-Write-Host "99: Secret menu ;)" -ForegroundColor Darkblue
+Write-Host "99: Secret menu ;)" -ForegroundColor Yellow
 #Write-Host "3: Windows 10 21H1 | French  | Pro (Not supported)" -ForegroundColor Yellow
 #Write-Host "4: Windows 10 21H1 | English | Pro (Not supported)" -ForegroundColor Yellow
 Write-Host ""

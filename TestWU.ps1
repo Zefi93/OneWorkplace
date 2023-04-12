@@ -13,7 +13,8 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 }
 Clear-Host
 Write-Host "===========================================================" -ForegroundColor Yellow
-Write-Host "================== Windows Edition (1.2) ==================" -ForegroundColor Yellow
+Write-Host "================== Windows Edition (1.3) ==================" -ForegroundColor Yellow
+Write-Host "======================= Avril 2023 ========================" -ForegroundColor Yellow
 Write-Host "===========================================================" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "1: Windows 10 22H2 | French  | Pro (Use This One !)" -ForegroundColor Green

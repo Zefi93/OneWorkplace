@@ -16,10 +16,10 @@ Write-Host "===========================================================" -Foregr
 Write-Host "================== Windows Edition (1.2) ==================" -ForegroundColor Yellow
 Write-Host "===========================================================" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "1: Windows 10 20H2 | French  | Pro (Use This One !)" -ForegroundColor Green
-Write-Host "2: Windows 10 20H2 | English | Pro" -ForegroundColor Yellow
-Write-Host "3: Windows 10 21H1 | French  | Pro (Not supported)" -ForegroundColor Yellow
-Write-Host "4: Windows 10 21H1 | English | Pro (Not supported)" -ForegroundColor Yellow
+Write-Host "1: Windows 10 22H2 | French  | Pro (Use This One !)" -ForegroundColor Green
+Write-Host "2: Windows 10 22H2 | English | Pro" -ForegroundColor Yellow
+Write-Host "3: Windows 11 22H2 | French  | Pro (Not supported)" -ForegroundColor Yellow
+Write-Host "4: Windows 11 22H2 | English | Pro (Not supported)" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "5: Exit`n" -ForegroundColor Cyan
 $input = Read-Host "Please make a selection"
@@ -31,14 +31,14 @@ Install-Module OSD -Force
 
 switch ($input)
 {
-    '1' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
-    '2' {   Start-OSDCloud -OSLanguage en-us -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
-    '3' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
-    '4' {   Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
+    '1' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 22H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
+    '2' {   Start-OSDCloud -OSLanguage en-us -OSBuild 22H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
+    '3' {   Start-OSDCloud -OSLanguage fr-fr -OSName 'Windows 11 22H2 x64' -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
+    '4' {   Start-OSDCloud -OSLanguage en-us -OSName 'Windows 11 22H2 x64' -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
 
     '5' { Exit }
     '99' {  Start-OSDCloud }
-    'HP' {  Start-OSDCloud -OSLanguage fr-fr -OSBuild 20H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 -Screenshot -Oslicense Retail }
+    'HP' {  Start-OSDCloud -OSLanguage fr-fr -OSBuild 22H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Manufacturer HP -Product 8723 -Screenshot -Oslicense Retail }
 }
 
 #================================================================================================

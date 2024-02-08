@@ -23,7 +23,7 @@ Write-Host "3: Windows 11 23H2 | French  | Pro (Use This One !)" -ForegroundColo
 Write-Host "4: Windows 11 23H2 | English | Pro (Use This One !)" -ForegroundColor Green
 Write-Host ""
 Write-Host "99: Secret Menu !" -ForegroundColor Blue
-Write-Host "0: Start OsdCloudGui" -ForegroundColor Green
+Write-Host "0: Start OsdCloudGui" -ForegroundColor Blue
 Write-Host ""
 Write-Host "5: Exit`n" -ForegroundColor Cyan
 $input = Read-Host "Please make a selection"

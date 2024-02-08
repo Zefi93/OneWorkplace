@@ -22,6 +22,9 @@ Write-Host "2: Windows 10 22H2 | English | Pro" -ForegroundColor Yellow
 Write-Host "3: Windows 11 23H2 | French  | Pro (Use This One !)" -ForegroundColor Green
 Write-Host "4: Windows 11 23H2 | English | Pro (Use This One !)" -ForegroundColor Green
 Write-Host ""
+Write-Host "99: Secret Menu !" -ForegroundColor Blue
+Write-Host "0: Start OsdCloudGui" -ForegroundColor Green
+Write-Host ""
 Write-Host "5: Exit`n" -ForegroundColor Cyan
 $input = Read-Host "Please make a selection"
 
@@ -32,6 +35,7 @@ Install-Module OSD -Force
 
 switch ($input)
 {
+    '0' {   Start-OSDCloudGui }
     '1' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 22H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
     '2' {   Start-OSDCloud -OSLanguage en-us -OSBuild 22H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
     '3' {   Start-OSDCloud -OSLanguage fr-fr -OSName 'Windows 11 23H2 x64' -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }

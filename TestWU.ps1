@@ -14,7 +14,7 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 Clear-Host
 Write-Host "===========================================================" -ForegroundColor Yellow
 Write-Host "================== Windows Edition (1.4) ==================" -ForegroundColor Yellow
-Write-Host "====================== Février 2024 =======================" -ForegroundColor Yellow
+Write-Host "====================== Fevrier 2024 =======================" -ForegroundColor Yellow
 Write-Host "===========================================================" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "1: Windows 10 22H2 | French  | Pro" -ForegroundColor Yellow
@@ -23,7 +23,7 @@ Write-Host "3: Windows 11 23H2 | French  | Pro (Use This One !)" -ForegroundColo
 Write-Host "4: Windows 11 23H2 | English | Pro (Use This One !)" -ForegroundColor Green
 Write-Host ""
 Write-Host "99: Secret Menu !" -ForegroundColor Blue
-Write-Host "0: Start OsdCloudGui" -ForegroundColor Blue
+Write-Host "0:  Start OsdCloudGui" -ForegroundColor Blue
 Write-Host ""
 Write-Host "5: Exit`n" -ForegroundColor Cyan
 $input = Read-Host "Please make a selection"

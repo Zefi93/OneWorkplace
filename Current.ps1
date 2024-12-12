@@ -6,6 +6,7 @@
 # Version 1.1 (30/01/2022) : Fix Typo
 # Version 1.2 (31/01/2022) : Add OSLicense
 # Version 1.3 (27/09/2022) : Add new release version
+# Version 1.' (12/12/2024) : Add new release version
 
 #Change Display Resolution for Virtual Machine
 if ((Get-MyComputerModel) -match 'Virtual') {

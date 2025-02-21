@@ -3,10 +3,12 @@
 #               for 20H2 and also install drivers and Windows updates to latest as needed.
 #================================================================================================
 
-# Version 1.1 (30/01/2022) : Fix Typo
-# Version 1.2 (31/01/2022) : Add OSLicense
-# Version 1.3 (27/09/2022) : Add new release version
-# Version 1.' (12/12/2024) : Add new release version
+# Version 1.1   (30/01/2022) : Fix Typo
+# Version 1.2   (31/01/2022) : Add OSLicense
+# Version 1.3   (27/09/2022) : Add new release version
+# Version 1.4   (12/12/2024) : Add new release version
+# Version 1.4.1 (21/02/2025) : Fix issue with W10
+
 
 #Change Display Resolution for Virtual Machine
 if ((Get-MyComputerModel) -match 'Virtual') {
@@ -15,10 +17,10 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 }
 Clear-Host
 Write-Host "===========================================================" -ForegroundColor Yellow
-Write-Host "================== Windows Edition (1.4) ==================" -ForegroundColor Yellow
+Write-Host "================= Windows Edition (1.4.1) =================" -ForegroundColor Yellow
 Write-Host "===========================================================" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "1: Windows 10 23H2 | French  | Pro (Use This One !)" -ForegroundColor Green
+Write-Host "1: Windows 10 22H2 | French  | Pro (Use This One !)" -ForegroundColor Green
 Write-Host "2: Windows 11 23H2 | French  | Pro" -ForegroundColor Yellow
 Write-Host "3: Start OSDCloud GUI" -ForegroundColor Yellow
 Write-Host "99: Secret menu ;)" -ForegroundColor Yellow
@@ -35,7 +37,7 @@ Install-Module OSD -Force
 
 switch ($input)
 {
-    '1' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 23H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
+    '1' {   Start-OSDCloud -OSLanguage fr-fr -OsVersion 'Windows 10' -OSBuild 22H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
     '2' {   Start-OSDCloud -OSLanguage fr-fr -OsVersion 'Windows 11' -OSBuild 23H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
     '3' {   Start-OSDCloudGui }
 #    '3' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }

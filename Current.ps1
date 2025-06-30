@@ -8,6 +8,7 @@
 # Version 1.3   (27/09/2022) : Add new release version
 # Version 1.4   (12/12/2024) : Add new release version
 # Version 1.4.1 (21/02/2025) : Fix issue with W10
+# Version 1.4.2 (30/06/2025) : Add W11 24H2
 
 
 #Change Display Resolution for Virtual Machine
@@ -20,9 +21,10 @@ Write-Host "===========================================================" -Foregr
 Write-Host "================= Windows Edition (1.4.1) =================" -ForegroundColor Yellow
 Write-Host "===========================================================" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "1: Windows 10 22H2 | French  | Pro (Use This One !)" -ForegroundColor Green
+Write-Host "1: Windows 10 22H2 | French  | Pro" -ForegroundColor Green
 Write-Host "2: Windows 11 23H2 | French  | Pro" -ForegroundColor Yellow
-Write-Host "3: Start OSDCloud GUI" -ForegroundColor Yellow
+Write-Host "3: Windows 11 23H2 | French  | Pro" -ForegroundColor Yellow
+Write-Host "5: Start OSDCloud GUI" -ForegroundColor Yellow
 Write-Host "99: Secret menu ;)" -ForegroundColor Yellow
 #Write-Host "3: Windows 10 21H1 | French  | Pro (Not supported)" -ForegroundColor Yellow
 #Write-Host "4: Windows 10 21H1 | English | Pro (Not supported)" -ForegroundColor Yellow
@@ -39,7 +41,8 @@ switch ($input)
 {
     '1' {   Start-OSDCloud -OSLanguage fr-fr -OsVersion 'Windows 10' -OSBuild 22H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
     '2' {   Start-OSDCloud -OSLanguage fr-fr -OsVersion 'Windows 11' -OSBuild 23H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
-    '3' {   Start-OSDCloudGui }
+    '3' {   Start-OSDCloud -OSLanguage fr-fr -OsVersion 'Windows 11' -OSBuild 24H2 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
+    '5' {   Start-OSDCloudGui }
 #    '3' {   Start-OSDCloud -OSLanguage fr-fr -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
 #    '4' {   Start-OSDCloud -OSLanguage en-us -OSBuild 21H1 -OSEdition Pro -ZTI -SkipAutopilot -SkipODT -Oslicense Retail }
 

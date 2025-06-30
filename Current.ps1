@@ -23,7 +23,7 @@ Write-Host "===========================================================" -Foregr
 Write-Host ""
 Write-Host "1: Windows 10 22H2 | French  | Pro" -ForegroundColor Green
 Write-Host "2: Windows 11 23H2 | French  | Pro" -ForegroundColor Yellow
-Write-Host "3: Windows 11 23H2 | French  | Pro" -ForegroundColor Yellow
+Write-Host "3: Windows 11 24H2 | French  | Pro" -ForegroundColor Yellow
 Write-Host "5: Start OSDCloud GUI" -ForegroundColor Yellow
 Write-Host "99: Secret menu ;)" -ForegroundColor Yellow
 #Write-Host "3: Windows 10 21H1 | French  | Pro (Not supported)" -ForegroundColor Yellow
